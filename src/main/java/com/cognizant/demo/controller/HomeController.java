@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 	@GetMapping("/")
-	public String rootCall() {
-		return "Hello by default from Azure!";
+	public DefaultResponse rootCall() {
+		return new DefaultResponse("From the Home page");
 	}
 	
 	
 	@GetMapping("/api/hello")
-	public String helloCall() {
-		return "Hello from Azure Spring boot App!";
+	public DefaultResponse helloCall() {
+		return new DefaultResponse("Hello from Azure Spring boot App!");
 	}
 }
